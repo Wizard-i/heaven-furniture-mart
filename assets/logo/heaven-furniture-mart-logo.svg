@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 70" width="100%" height="100%" aria-label="Heaven Furniture Mart Logo">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#B8955A"/>
+      <stop offset="100%" stop-color="#9A773E"/>
+    </linearGradient>
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F3E5AB"/>
+      <stop offset="100%" stop-color="#B8955A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Logo Mark (Geometric Monogram / Wood Grain H Symbol) -->
+  <g transform="translate(10, 5)">
+    <!-- Outer Shield / Diamond Frame -->
+    <path d="M 30 2 L 56 30 L 30 58 L 4 30 Z" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.85"/>
+    <path d="M 30 7 L 51 30 L 30 53 L 9 30 Z" fill="none" stroke="url(#goldGrad)" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
+    
+    <!-- Stylized H Wood Grain Pattern -->
+    <path d="M 19 18 L 19 42 M 41 18 L 41 42 M 19 30 L 41 30" fill="none" stroke="url(#goldGlow)" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Crown accent on top -->
+    <path d="M 23 14 L 30 8 L 37 14" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Brand Typography -->
+  <!-- Main Name: HEAVEN -->
+  <text x="75" y="34" font-family="'Cormorant Garamond', 'Georgia', serif" font-size="26" font-weight="700" letter-spacing="3" fill="#F7F3EC">HEAVEN</text>
+  
+  <!-- Secondary Name: FURNITURE MART -->
+  <text x="75" y="52" font-family="'Inter', sans-serif" font-size="10" font-weight="500" letter-spacing="4" fill="#B8955A">FURNITURE MART</text>
+  
+  <!-- Location Badge: CHATTOGRAM -->
+  <text x="245" y="52" font-family="'Inter', sans-serif" font-size="8" font-weight="600" letter-spacing="1.5" fill="#8C9A96" opacity="0.9">• CHATTOGRAM</text>
+</svg>
