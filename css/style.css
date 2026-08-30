@@ -772,11 +772,12 @@ button {
 }
 
 .pillar-card {
-  background: var(--color-ivory-card);
-  padding: 2.5rem 2rem;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--color-ivory-border);
-  transition: all var(--transition-normal);
+  background-color: #FFFFFF;
+  padding: 2.75rem 2.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(22, 34, 31, 0.08);
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.06);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.45s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -795,9 +796,9 @@ button {
 }
 
 .pillar-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
-  border-color: transparent;
+  transform: translateY(-12px) scale(1.015);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.12), 0 0 25px rgba(184, 149, 90, 0.15);
+  border-color: rgba(184, 149, 90, 0.3);
 }
 
 .pillar-card:hover::before {
@@ -851,13 +852,15 @@ button {
 
 .collection-card {
   position: relative;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   overflow: hidden;
   height: 420px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  transition: transform 0.4s var(--ease-out-cubic), box-shadow 0.4s var(--ease-out-cubic);
+  border: 1px solid rgba(184, 149, 90, 0.15);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.45s cubic-bezier(0.16, 1, 0.3, 1);
   animation: bubbleFloat 6s ease-in-out infinite;
+  will-change: transform, box-shadow;
 }
 
 /* Staggered Floating / Bubble Bobbing for each card */
@@ -900,8 +903,9 @@ button {
 
 .collection-card:hover {
   animation-play-state: paused;
-  transform: translateY(-14px) scale(1.015);
-  box-shadow: 0 25px 45px -10px rgba(0, 0, 0, 0.25), 0 0 25px rgba(184, 149, 90, 0.2);
+  transform: translateY(-18px) scale(1.025);
+  border-color: rgba(184, 149, 90, 0.6);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.35), 0 0 35px rgba(184, 149, 90, 0.25);
 }
 
 .collection-card.large {
