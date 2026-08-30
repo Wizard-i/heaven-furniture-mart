@@ -1139,6 +1139,37 @@ button {
   margin-top: 0.35rem;
 }
 
+/* Milestone Timeline Strip */
+.milestones-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(22, 34, 31, 0.1);
+}
+
+.milestone-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.milestone-year {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  letter-spacing: 0.02em;
+}
+
+.milestone-text {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  margin: 0;
+}
+
 /* --------------------------------------------------------------------------
    12. Final High-Impact CTA Banner
    -------------------------------------------------------------------------- */
