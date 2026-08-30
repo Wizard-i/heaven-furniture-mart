@@ -14,25 +14,25 @@
   --color-charcoal-teal: #16221F;
   --color-charcoal-dark: #0D1614;
   --color-charcoal-card: #1E2D29;
-  
+
   --color-gold: #B8955A;
   --color-gold-light: #D4AF37;
   --color-gold-hover: #9E7D46;
   --color-gold-glow: rgba(184, 149, 90, 0.25);
-  
+
   --color-ivory: #F7F3EC;
   --color-ivory-card: #FFFFFF;
   --color-ivory-muted: #EDE7DA;
   --color-ivory-border: #E2DACB;
-  
+
   --color-wood-dark: #3B2A20;
   --color-wood-tan: #C9A278;
-  
+
   --color-text-dark: #1A2623;
   --color-text-muted: #5A6965;
   --color-text-light: #F7F3EC;
   --color-text-light-muted: #A3B2AE;
-  
+
   --color-whatsapp: #25D366;
   --color-whatsapp-hover: #1EBE5A;
 
@@ -63,7 +63,9 @@
 /* --------------------------------------------------------------------------
    2. Reset & Universal Styles
    -------------------------------------------------------------------------- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -84,7 +86,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img, svg {
+img,
+svg {
   display: block;
   max-width: 100%;
   height: auto;
@@ -106,13 +109,16 @@ button {
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--color-charcoal-dark);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--color-gold);
   border-radius: var(--radius-sm);
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-gold-light);
 }
@@ -225,7 +231,8 @@ button {
 .btn-gold::after {
   content: '';
   position: absolute;
-  top: 0; left: -100%;
+  top: 0;
+  left: -100%;
   width: 50%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
@@ -456,14 +463,19 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 60%;
   transform: scale(1.05);
-  animation: heroZoom 20s infinite alternate ease-in-out;
+  animation: heroZoom 10s infinite alternate ease-in-out;
 }
 
 @keyframes heroZoom {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.08); }
+  0% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1.10);
+  }
 }
 
 .hero-overlay {
@@ -474,8 +486,9 @@ button {
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(13, 22, 20, 0.75) 0%,
-    rgba(22, 34, 31, 0.65) 50%,
+    rgba(13, 22, 20, 0.88) 0%,
+    rgba(22, 34, 31, 0.60) 40%,
+    rgba(22, 34, 31, 0.65) 60%,
     rgba(13, 22, 20, 0.95) 100%
   );
   z-index: 2;
@@ -526,7 +539,7 @@ button {
 }
 
 .hero-title span {
-  font-size: 0.78em;
+  font-size: 0.60em;
   font-style: italic;
   font-weight: 400;
   color: var(--color-gold);
@@ -617,8 +630,15 @@ button {
 }
 
 @keyframes scrollWheel {
-  0% { opacity: 1; top: 6px; }
-  100% { opacity: 0; top: 20px; }
+  0% {
+    opacity: 1;
+    top: 6px;
+  }
+
+  100% {
+    opacity: 0;
+    top: 20px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -829,12 +849,10 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(22, 34, 31, 0.1) 0%,
-    rgba(22, 34, 31, 0.4) 50%,
-    rgba(22, 34, 31, 0.9) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(22, 34, 31, 0.1) 0%,
+      rgba(22, 34, 31, 0.4) 50%,
+      rgba(22, 34, 31, 0.9) 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -955,8 +973,15 @@ button {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .step-badge {
@@ -1383,7 +1408,9 @@ button {
   margin-bottom: 0.5rem;
 }
 
-.form-input, .form-select, .form-textarea {
+.form-input,
+.form-select,
+.form-textarea {
   width: 100%;
   padding: 0.85rem 1.15rem;
   background: rgba(247, 243, 236, 0.06);
@@ -1395,7 +1422,9 @@ button {
   transition: border-color var(--transition-fast);
 }
 
-.form-input:focus, .form-select:focus, .form-textarea:focus {
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
   outline: none;
   border-color: var(--color-gold);
   background: rgba(247, 243, 236, 0.1);
@@ -1451,29 +1480,45 @@ button {
 }
 
 /* Stagger delay helpers */
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
+.delay-1 {
+  transition-delay: 0.1s;
+}
+
+.delay-2 {
+  transition-delay: 0.2s;
+}
+
+.delay-3 {
+  transition-delay: 0.3s;
+}
+
+.delay-4 {
+  transition-delay: 0.4s;
+}
 
 /* --------------------------------------------------------------------------
    17. Responsive Media Queries
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
-  .brand-grid, .proof-grid, .bespoke-display {
+
+  .brand-grid,
+  .proof-grid,
+  .bespoke-display {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  
+
   .pillars-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .collections-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
-  .collection-card.large, .collection-card.medium, .collection-card.third {
+
+  .collection-card.large,
+  .collection-card.medium,
+  .collection-card.third {
     grid-column: span 1;
   }
 
@@ -1484,22 +1529,24 @@ button {
 }
 
 @media (max-width: 768px) {
-  .nav-desktop, .header-cta {
+
+  .nav-desktop,
+  .header-cta {
     display: none;
   }
-  
+
   .mobile-toggle {
     display: flex;
   }
-  
+
   .hero-trust-bar {
     gap: 1.5rem;
   }
-  
+
   .pillars-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .collections-grid {
     grid-template-columns: 1fr;
   }
@@ -1512,14 +1559,18 @@ button {
   .mobile-sticky-bar {
     display: block;
   }
-  
+
   .footer {
-    padding-bottom: 5.5rem; /* space for mobile sticky bar */
+    padding-bottom: 5.5rem;
+    /* space for mobile sticky bar */
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
