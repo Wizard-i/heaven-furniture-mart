@@ -287,7 +287,7 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   5. Header & Navigation (Sticky & Glassmorphism)
+   5. Header & Navigation (Floating Dynamic Island Sticky Bar)
    -------------------------------------------------------------------------- */
 .header {
   position: fixed;
@@ -295,23 +295,60 @@ button {
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 1.25rem 0;
-  transition: all var(--transition-normal);
-}
-
-.header.scrolled {
-  background: rgba(22, 34, 31, 0.94);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  padding: 0.85rem 0;
-  border-bottom: 1px solid rgba(184, 149, 90, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
 }
 
 .header-container {
+  pointer-events: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Floating Island Scrolled State */
+.header.scrolled {
+  top: 1rem;
+  padding: 0;
+  animation: navDropIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes navDropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-25px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.header.scrolled .header-container {
+  background: rgba(22, 34, 31, 0.90);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(184, 149, 90, 0.35);
+  border-radius: var(--radius-full);
+  padding: 0.65rem 1.75rem;
+  max-width: 1100px;
+  width: calc(100% - 2rem);
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.5), 0 0 25px rgba(184, 149, 90, 0.15);
+}
+
+.header.scrolled .header-logo {
+  height: 40px;
+}
+
+.header.scrolled .header-cta {
+  padding: 0.65rem 1.4rem;
+  font-size: 0.78125rem;
 }
 
 .header-logo {
@@ -319,9 +356,10 @@ button {
   width: auto;
   display: flex;
   align-items: center;
+  transition: height var(--transition-normal);
 }
 
-.header-logo svg {
+.header-logo img {
   height: 100%;
   width: auto;
 }

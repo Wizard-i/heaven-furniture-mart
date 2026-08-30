@@ -33,11 +33,19 @@ function initHeaderScroll() {
   const header = document.querySelector('.header');
   if (!header) return;
 
+  let isScrolled = false;
+
   const handleScroll = () => {
-    if (window.scrollY > 40) {
-      header.classList.add('scrolled');
+    if (window.scrollY > 80) {
+      if (!isScrolled) {
+        header.classList.add('scrolled');
+        isScrolled = true;
+      }
     } else {
-      header.classList.remove('scrolled');
+      if (isScrolled) {
+        header.classList.remove('scrolled');
+        isScrolled = false;
+      }
     }
   };
 
