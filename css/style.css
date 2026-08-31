@@ -599,11 +599,11 @@ button {
 }
 
 .hero-subline {
-  font-size: clamp(1.05rem, 1.5vw, 1.3rem);
-  line-height: 1.65;
+  font-size: clamp(0.875rem, 1.1vw, 1.05rem);
+  line-height: 1.6;
   color: rgba(247, 243, 236, 0.85);
-  margin-bottom: 2.5rem;
-  max-width: 660px;
+  margin-bottom: 1.75rem;
+  max-width: 580px;
   font-weight: 300;
 }
 
@@ -1724,6 +1724,12 @@ button {
 }
 
 @media (max-width: 768px) {
+  .hero-subline {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
   .btn {
     padding: 0.45rem 0.95rem;
     font-size: 0.6875rem;
