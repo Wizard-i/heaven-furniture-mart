@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Our Story & Heritage — Over 15 years of bespoke master woodworking in Chattogram by founder Abul Kalam Bhuiyan. Learn about Heaven Furniture Mart's solid teak commitments.">
+  <meta name="keywords" content="Heaven Furniture Mart story, Abul Kalam Bhuiyan, bespoke furniture heritage Chattogram, solid teak wood craftsmanship">
+  
+  <title>Our Heritage & Story — Heaven Furniture Mart, Chattogram</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪑</text></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    /* About Page Specific Styles */
+    .about-hero {
+      padding: clamp(4rem, 8vw, 6.5rem) 0;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .timeline-wrap {
+      position: relative;
+      max-width: 860px;
+      margin: 4rem auto 0;
+    }
+    .timeline-wrap::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 20px;
+      width: 2px;
+      background: var(--border-medium);
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 60px;
+      margin-bottom: 3rem;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: 12px;
+      top: 4px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--accent-gold);
+      border: 3px solid #FFFFFF;
+      box-shadow: 0 0 0 2px var(--accent-gold);
+    }
+    .timeline-year {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      color: var(--accent-gold-hover);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+    .timeline-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .commitments-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) {
+      .commitments-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Mouse Glow Follower -->
+  <div class="ambient-mouse-glow" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="header-brand" aria-label="Heaven Furniture Mart Home">
+        <div class="brand-monogram">H</div>
+        <div class="brand-text">
+          <span class="brand-title">Heaven Furniture Mart</span>
+          <span class="brand-subtitle">The Sovereign Atelier · Agrabad</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="shop.html" class="nav-item">Collections</a>
+        <a href="index.html#video-stream" class="nav-item">Living Atelier</a>
+        <a href="index.html#rites" class="nav-item">The Craft</a>
+        <a href="index.html#materials" class="nav-item">Timber Studio</a>
+        <a href="about.html" class="nav-item active">Our Heritage</a>
+        <a href="index.html#showroom" class="nav-item">Visit</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://wa.me/8801960481983" target="_blank" rel="noopener noreferrer" class="btn btn-gold header-cta">
+          <span>Book Consultation</span>
+        </a>
+        <button class="mobile-toggle-btn" aria-label="Open Mobile Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Drawer -->
+  <div class="mobile-drawer-backdrop"></div>
+  <aside class="mobile-menu-drawer" aria-label="Navigation Menu">
+    <div class="mobile-drawer-header">
+      <div class="header-brand">
+        <div class="brand-monogram">H</div>
+        <div class="brand-text">
+          <span class="brand-title" style="color:#FAF7F2;">Heaven Furniture</span>
+          <span class="brand-subtitle">Agrabad · Chattogram</span>
+        </div>
+      </div>
+      <button class="mobile-drawer-close" aria-label="Close Navigation Menu">✕</button>
+    </div>
+    <nav class="mobile-drawer-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="shop.html" class="mobile-nav-link">Collection</a>
+      <a href="index.html#video-stream" class="mobile-nav-link">Living Atelier</a>
+      <a href="about.html" class="mobile-nav-link active">About</a>
+      <a href="index.html#showroom" class="mobile-nav-link">Contact</a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <div class="drawer-meta-section">
+        <span class="drawer-meta-label">(EMAIL)</span>
+        <a href="mailto:heavenfurnituremart@gmail.com" class="drawer-email-link">heavenfurnituremart@gmail.com</a>
+      </div>
+      <div class="drawer-meta-section">
+        <span class="drawer-meta-label">(SOCIALS)</span>
+        <div class="drawer-socials-grid">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="drawer-social-item">INSTAGRAM ↗</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="drawer-social-item">FACEBOOK ↗</a>
+          <a href="https://wa.me/8801960481983" target="_blank" rel="noopener" class="drawer-social-item">WHATSAPP ↗</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="drawer-social-item">YOUTUBE ↗</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- About Hero with Watermark & Stats -->
+    <section class="about-hero" style="position: relative; overflow: hidden;">
+      <div class="bg-watermark-typography" aria-hidden="true">HERITAGE</div>
+      <div class="container reveal">
+        <span class="eyebrow">A Legacy of Honest Craft / 2010 – 2026</span>
+        <h1 class="serif-title" style="font-size: clamp(2.5rem, 5.5vw, 4.5rem); max-width: 900px; margin-bottom: 1.5rem;">
+          Made to be lived with, <span class="font-script" style="font-size: 1.15em; color: var(--accent-terracotta);">never just looked at.</span>
+        </h1>
+        <p style="font-size: clamp(1.0625rem, 1.8vw, 1.25rem); color: var(--text-secondary); max-width: 720px; line-height: 1.8; margin-bottom: 3rem;">
+          For over sixteen years, Heaven Furniture Mart has stood as Chattogram's sanctuary for authentic solid wood joinery. We believe furniture should carry your family's laughter and memories across generations.
+        </p>
+
+        <!-- Stats Counter Strip -->
+        <div class="hero-trust-row reveal reveal-delay-2" style="margin-top: 2rem;">
+          <div class="trust-stat-box">
+            <span class="stat-number" data-counter-target="16" data-counter-suffix="+">16+</span>
+            <span class="stat-label">Years of Atelier Mastery</span>
+          </div>
+          <div class="trust-stat-box">
+            <span class="stat-number" data-counter-target="350" data-counter-suffix="+">350+</span>
+            <span class="stat-label">Private Residencies Furnished</span>
+          </div>
+          <div class="trust-stat-box">
+            <span class="stat-number" data-counter-target="100" data-counter-suffix="%">100%</span>
+            <span class="stat-label">Solid Seasoned Heartwood</span>
+          </div>
+          <div class="trust-stat-box">
+            <span class="stat-number" data-counter-target="25" data-counter-suffix=" Yrs">25 Yrs</span>
+            <span class="stat-label">Structural Guarantee</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Luxury Infinite Crest Ribbon -->
+    <div class="marquee-ribbon-strip" aria-hidden="true">
+      <div class="marquee-ribbon-track">
+        <div class="ribbon-item"><span>100% Solid Seasoned Teak</span><span class="diamond">◆</span></div>
+        <div class="ribbon-item"><span>25-Year Integrity Warranty</span><span class="diamond">◆</span></div>
+        <div class="ribbon-item"><span>Founder Abul Kalam Bhuiyan</span><span class="diamond">◆</span></div>
+        <div class="ribbon-item"><span>Zero Plywood or Particle Boards</span><span class="diamond">◆</span></div>
+        <div class="ribbon-item"><span>Hand-Chiseled Mortise & Tenon</span><span class="diamond">◆</span></div>
+        <div class="ribbon-item"><span>Agrabad Access Road Flagship Showroom</span><span class="diamond">◆</span></div>
+        <!-- Loop duplicate -->
+        <div class="ribbon-item"><span>100% Solid Seasoned Teak</span><span class="diamond">◆</span></div>
+        <div class="ribbon-item"><span>25-Year Integrity Warranty</span><span class="diamond">◆</span></div>
+        <div class="ribbon-item"><span>Founder Abul Kalam Bhuiyan</span><span class="diamond">◆</span></div>
+        <div class="ribbon-item"><span>Zero Plywood or Particle Boards</span><span class="diamond">◆</span></div>
+        <div class="ribbon-item"><span>Hand-Chiseled Mortise & Tenon</span><span class="diamond">◆</span></div>
+        <div class="ribbon-item"><span>Agrabad Access Road Flagship Showroom</span><span class="diamond">◆</span></div>
+      </div>
+    </div>
+
+    <!-- Founder Section (With Uploaded Picture & 3D Tilt) -->
+    <section class="founder-section reveal" style="background: var(--bg-dark); padding: clamp(4.5rem, 8vw, 7.5rem) 0;">
+      <div class="container">
+        <div class="founder-wrap">
+          <div class="founder-photo-frame card-3d-tilt">
+            <img src="assets/founder/abul-kalam-bhuiyan.jpg" alt="Abul Kalam Bhuiyan, Founder of Heaven Furniture Mart">
+            <div class="founder-verified-badge">
+              <div class="badge-icon">✓</div>
+              <div class="badge-text">
+                <strong>Abul Kalam Bhuiyan</strong>
+                <span>Founder & Managing Director</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="founder-content-block">
+            <span class="eyebrow">The Founder's Philosophy</span>
+            <h2 class="founder-quote-serif">
+              "When you build with <span class="script-word">real heartwood</span>, the piece honors both the tree and the home."
+            </h2>
+            <p class="founder-bio-p">
+              Born and raised in the woodworking traditions of greater Chattogram, Abul Kalam Bhuiyan began his journey with a simple conviction: modern mass-production was stripping furniture of its soul. Particleboards, laminate stickers, and synthetic glues were deteriorating within a few years of coastal humidity.
+            </p>
+            <p class="founder-bio-p">
+              He founded Heaven Furniture Mart on Agrabad Access Road to restore traditional joinery: solid mortise and tenon joints, kiln-dried Burma and Chittagong Teak, and hand-chiseled detailing that improves in beauty as the wood ages.
+            </p>
+            <div class="founder-signature-box">
+              <div class="founder-name-tag">
+                <strong>Abul Kalam Bhuiyan</strong>
+                <span>Master Artisan & Founder</span>
+              </div>
+              <a href="https://wa.me/8801960481983" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                <span>Direct WhatsApp Consultation</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Milestones Timeline with Reveal & Tilt -->
+    <section style="padding: clamp(4.5rem, 8vw, 7.5rem) 0; background: var(--bg-primary);">
+      <div class="container reveal">
+        <div class="section-header center">
+          <span class="eyebrow">Our Journey / 2010 – 2026</span>
+          <h2 class="section-title">Sixteen Years of Steadfast Craft.</h2>
+          <p class="section-subtitle">
+            From our early cabinet workshop to outfitting some of Chattogram's most prestigious residences and corporate boardrooms.
+          </p>
+        </div>
+
+        <div class="timeline-wrap reveal-stagger">
+          <!-- 2010 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2010</div>
+            <div class="timeline-card card-3d-tilt">
+              <h3 style="font-family: var(--font-sans); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">The Atelier Is Founded</h3>
+              <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.65;">Abul Kalam Bhuiyan starts a specialized solid teak workshop with 4 master joiners, focusing on bespoke residential commissions across Chattogram.</p>
+            </div>
+          </div>
+
+          <!-- 2018 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2018</div>
+            <div class="timeline-card card-3d-tilt">
+              <h3 style="font-family: var(--font-sans); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Agrabad Access Road Flagship Showroom</h3>
+              <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.65;">Relocated to a dedicated multi-story showroom on Agrabad Access Road, allowing clients to experience completed living and bedroom suites in person.</p>
+            </div>
+          </div>
+
+          <!-- 2022 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2022</div>
+            <div class="timeline-card card-3d-tilt">
+              <h3 style="font-family: var(--font-sans); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Architectural Bespoke Millwork</h3>
+              <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.65;">Introduced dedicated architectural spatial measurement, pairing clients with senior interior designers for full-penthouse custom millwork.</p>
+            </div>
+          </div>
+
+          <!-- 2024 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2024</div>
+            <div class="timeline-card card-3d-tilt">
+              <h3 style="font-family: var(--font-sans); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">350+ Completed Residences</h3>
+              <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.65;">Crossed the milestone of furnishing over 350 luxury homes and executive offices across Khulshi, Nasirabad, Agrabad, and Panchlaish.</p>
+            </div>
+          </div>
+
+          <!-- 2026 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2026</div>
+            <div class="timeline-card card-3d-tilt">
+              <h3 style="font-family: var(--font-sans); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">The Modern Digital Atelier</h3>
+              <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.65;">Launched our interactive digital platform with live timber studio, 3D commission estimator, and direct WhatsApp consultations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CRAFTSMANSHIP COMPARISON MATRIX (The Competitive Decider Section) -->
+    <section style="padding: clamp(4.5rem, 8vw, 7.5rem) 0; background: var(--bg-secondary); border-top: 1px solid var(--border-subtle);">
+      <div class="container reveal">
+        <div class="section-header center">
+          <span class="eyebrow">The Integrity Audit</span>
+          <h2 class="section-title">Commercial Market vs Sovereign Atelier.</h2>
+          <p class="section-subtitle">
+            Why our furniture outlives mass-produced market pieces by decades. A transparent material comparison:
+          </p>
+        </div>
+
+        <div class="matrix-wrap card-3d-tilt">
+          <div class="matrix-header-row">
+            <div>Criterion / Component</div>
+            <div style="color: var(--text-muted);">Mass-Market Furniture</div>
+            <div class="col-heaven">✦ Heaven Furniture Mart</div>
+          </div>
+
+          <div class="matrix-item-row">
+            <div class="matrix-criterion">
+              <strong>Core Timber Foundation</strong>
+              <span>Structural lumber used for frames, legs, and load-bearing joints</span>
+            </div>
+            <div>
+              <span class="badge-commercial-flaw">✕ Particle Board & Plywood</span>
+            </div>
+            <div>
+              <span class="badge-heaven-heirloom">✓ 100% Solid Kiln-Dried Teak</span>
+            </div>
+          </div>
+
+          <div class="matrix-item-row">
+            <div class="matrix-criterion">
+              <strong>Joinery Architecture</strong>
+              <span>How corner joints, tenons, and rails are secured</span>
+            </div>
+            <div>
+              <span class="badge-commercial-flaw">✕ Metal Brackets & Staples</span>
+            </div>
+            <div>
+              <span class="badge-heaven-heirloom">✓ Hand-Cut Mortise & Tenon</span>
+            </div>
+          </div>
+
+          <div class="matrix-item-row">
+            <div class="matrix-criterion">
+              <strong>Chattogram Coastal Humidity Resilience</strong>
+              <span>Resistance to seasonal swelling, damp air, and fungus</span>
+            </div>
+            <div>
+              <span class="badge-commercial-flaw">✕ Blisters & Delaminates</span>
+            </div>
+            <div>
+              <span class="badge-heaven-heirloom">✓ Natural Teak Resin Defense</span>
+            </div>
+          </div>
+
+          <div class="matrix-item-row">
+            <div class="matrix-criterion">
+              <strong>Finishing & Texture Treatment</strong>
+              <span>Surface luster and tactile contact</span>
+            </div>
+            <div>
+              <span class="badge-commercial-flaw">✕ Synthetic Plastic Lacquer</span>
+            </div>
+            <div>
+              <span class="badge-heaven-heirloom">✓ Hand-Polished Beeswax & Oils</span>
+            </div>
+          </div>
+
+          <div class="matrix-item-row">
+            <div class="matrix-criterion">
+              <strong>Expected Operational Lifespan</strong>
+              <span>Years of uncompromised structural integrity</span>
+            </div>
+            <div>
+              <span class="badge-commercial-flaw">✕ 2 to 4 Years Max</span>
+            </div>
+            <div>
+              <span class="badge-heaven-heirloom">✓ 25+ Years Heirloom Guarantee</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The 4 Guarantees -->
+    <section style="padding: clamp(4.5rem, 8vw, 7.5rem) 0; background: var(--bg-surface); border-top: 1px solid var(--border-subtle);">
+      <div class="container reveal">
+        <div class="section-header">
+          <span class="eyebrow">Our Unbroken Word</span>
+          <h2 class="section-title">Four Guarantees to Every Client.</h2>
+          <p class="section-subtitle">
+            Crafting luxury furniture requires mutual trust. Here is what we commit in writing for every commission:
+          </p>
+        </div>
+
+        <div class="commitments-grid reveal-stagger">
+          <div class="pillar-card card-3d-tilt">
+            <span class="pillar-number">01</span>
+            <h3 class="pillar-title">25-Year Wood Integrity Warranty</h3>
+            <p class="pillar-text">We warrant that our solid heartwood timbers will remain structurally sound, crack-free, and termite-resistant for a quarter-century.</p>
+          </div>
+
+          <div class="pillar-card card-3d-tilt">
+            <span class="pillar-number">02</span>
+            <h3 class="pillar-title">Zero Particle Board or Synthetic Fillers</h3>
+            <p class="pillar-text">We never allow hollow composites or cheap sawdust boards into our atelier. Every shelf, drawer bottom, and frame is genuine solid timber.</p>
+          </div>
+
+          <div class="pillar-card card-3d-tilt">
+            <span class="pillar-number">03</span>
+            <h3 class="pillar-title">Complimentary In-Home Spatial Survey</h3>
+            <p class="pillar-text">Our senior designers visit your residence in Chattogram to measure exact doorways, wall dimensions, and lighting before building.</p>
+          </div>
+
+          <div class="pillar-card card-3d-tilt">
+            <span class="pillar-number">04</span>
+            <h3 class="pillar-title">Direct Access to the Founder</h3>
+            <p class="pillar-text">Abul Kalam Bhuiyan remains actively involved in every project. You can speak with him directly about timber selection or design revisions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- Newsletter Bar -->
+      <div class="footer-newsletter-bar reveal">
+        <div class="newsletter-content">
+          <h3 class="newsletter-title">Subscribe to our newsletter.</h3>
+        </div>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Heaven Furniture Mart news and private previews.');">
+          <input type="email" placeholder="hello@gmail.com" required class="newsletter-input" aria-label="Your email address">
+          <button type="submit" class="newsletter-btn">Submit</button>
+        </form>
+      </div>
+
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <div class="header-brand" style="margin-bottom: 1.25rem;">
+            <div class="brand-monogram">H</div>
+            <div class="brand-text">
+              <span class="brand-title" style="color: var(--text-light);">Heaven Furniture Mart</span>
+              <span class="brand-subtitle">Chattogram</span>
+            </div>
+          </div>
+          <p style="font-size: 0.9375rem; color: var(--text-light-muted); line-height: 1.7;">
+            Chattogram's dedicated bespoke furniture house. Handcrafting heirloom solid teak, custom residential suites, and corporate architecture since 2010.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Flagship Home</a>
+            <a href="shop.html" class="footer-link">Curated Catalog</a>
+            <a href="about.html" class="footer-link">Heritage & Founder</a>
+            <a href="product.html" class="footer-link">Featured Commission</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Showroom & Atelier</h4>
+          <p style="font-size: 0.9375rem; color: var(--text-light-muted); line-height: 1.6;">
+            Agrabad Access Road, Chattogram.<br>
+            Hotline: +880 1960-481983<br>
+            Email: heavenfurnituremart@gmail.com
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2010 – 2026 Heaven Furniture Mart. RACDOX Hackathon Championship Submission.</p>
+        <p>100% Solid Seasoned Teak · Chattogram, Bangladesh</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

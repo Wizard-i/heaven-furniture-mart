@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curated Bespoke Collections — Heaven Furniture Mart. Browse solid teak living, bedroom, dining, and executive office furniture crafted in Chattogram.">
+  <meta name="keywords" content="Heaven Furniture Mart catalog, teak furniture shop Chattogram, bespoke living room, royal dining set, teak bedframe Agrabad">
+  
+  <title>Curated Collections — Heaven Furniture Mart, Chattogram</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪑</text></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    /* Shop Page Specific Styles */
+    .shop-hero {
+      padding: clamp(3.5rem, 6vw, 5rem) 0;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin: 2.5rem 0 3.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .filter-pill {
+      padding: 0.6rem 1.35rem;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-medium);
+      background: var(--bg-surface);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      transition: all var(--transition-fast);
+    }
+    .filter-pill:hover, .filter-pill.active {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      border-color: var(--bg-dark);
+      transform: translateY(-2px);
+    }
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 5rem;
+    }
+    .catalog-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition-normal);
+    }
+    .catalog-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(184, 139, 74, 0.4);
+    }
+    .catalog-card-media {
+      position: relative;
+      aspect-ratio: 1/1;
+      background: var(--bg-secondary);
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .catalog-card-media img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      transition: transform var(--transition-normal);
+    }
+    .catalog-card:hover .catalog-card-media img {
+      transform: scale(1.08);
+    }
+    .catalog-card-content {
+      padding: 1.75rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .catalog-category-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-gold);
+      margin-bottom: 0.35rem;
+    }
+    .catalog-piece-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      line-height: 1.25;
+      margin-bottom: 0.5rem;
+    }
+    .catalog-piece-meta {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .catalog-card-footer {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+    @media (max-width: 1024px) {
+      .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 640px) {
+      .catalog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Mouse Glow Follower -->
+  <div class="ambient-mouse-glow" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="header-brand" aria-label="Heaven Furniture Mart Home">
+        <div class="brand-monogram">H</div>
+        <div class="brand-text">
+          <span class="brand-title">Heaven Furniture Mart</span>
+          <span class="brand-subtitle">The Sovereign Atelier · Agrabad</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="shop.html" class="nav-item active">Collections</a>
+        <a href="index.html#video-stream" class="nav-item">Living Atelier</a>
+        <a href="index.html#rites" class="nav-item">The Craft</a>
+        <a href="index.html#materials" class="nav-item">Timber Studio</a>
+        <a href="about.html" class="nav-item">Our Heritage</a>
+        <a href="index.html#showroom" class="nav-item">Visit</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://wa.me/8801960481983" target="_blank" rel="noopener noreferrer" class="btn btn-gold header-cta">
+          <span>Book Consultation</span>
+        </a>
+        <button class="mobile-toggle-btn" aria-label="Open Mobile Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Drawer -->
+  <div class="mobile-drawer-backdrop"></div>
+  <aside class="mobile-menu-drawer" aria-label="Navigation Menu">
+    <div class="mobile-drawer-header">
+      <div class="header-brand">
+        <div class="brand-monogram">H</div>
+        <div class="brand-text">
+          <span class="brand-title" style="color:#FAF7F2;">Heaven Furniture</span>
+          <span class="brand-subtitle">Agrabad · Chattogram</span>
+        </div>
+      </div>
+      <button class="mobile-drawer-close" aria-label="Close Navigation Menu">✕</button>
+    </div>
+    <nav class="mobile-drawer-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="shop.html" class="mobile-nav-link active">Collection</a>
+      <a href="index.html#video-stream" class="mobile-nav-link">Living Atelier</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="index.html#showroom" class="mobile-nav-link">Contact</a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <div class="drawer-meta-section">
+        <span class="drawer-meta-label">(EMAIL)</span>
+        <a href="mailto:heavenfurnituremart@gmail.com" class="drawer-email-link">heavenfurnituremart@gmail.com</a>
+      </div>
+      <div class="drawer-meta-section">
+        <span class="drawer-meta-label">(SOCIALS)</span>
+        <div class="drawer-socials-grid">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="drawer-social-item">INSTAGRAM ↗</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="drawer-social-item">FACEBOOK ↗</a>
+          <a href="https://wa.me/8801960481983" target="_blank" rel="noopener" class="drawer-social-item">WHATSAPP ↗</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="drawer-social-item">YOUTUBE ↗</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Shop Hero with Watermark -->
+    <section class="shop-hero" style="position: relative; overflow: hidden;">
+      <div class="bg-watermark-typography" aria-hidden="true">COLLECTION</div>
+      <div class="container reveal">
+        <span class="eyebrow">The Sovereign Catalog / 11 Commissions</span>
+        <h1 class="serif-title" style="font-size: clamp(2.5rem, 5.5vw, 4.25rem); margin-bottom: 1rem;">
+          Bespoke Commission Collections.
+        </h1>
+        <p style="font-size: 1.125rem; color: var(--text-secondary); max-width: 680px; line-height: 1.75;">
+          Every piece is built to order in solid seasoned heartwood teak, bespoke spatial dimensions, and custom upholstery for prestigious residences across Chattogram.
+        </p>
+      </div>
+    </section>
+
+    <!-- Luxury Infinite Crest Ribbon -->
+    <div class="marquee-ribbon-strip" aria-hidden="true">
+      <div class="marquee-ribbon-track">
+        <div class="ribbon-item"><span>100% Solid Seasoned Teak</span><span class="diamond">◆</span></div>
+        <div class="ribbon-item"><span>Bespoke Spatial Commissions</span><span class="diamond">◆</span></div>
+        <div class="ribbon-item"><span>Kiln-Dried Heartwood Lumber</span><span class="diamond">◆</span></div>
+        <div class="ribbon-item"><span>25-Year Integrity Warranty</span><span class="diamond">◆</span></div>
+        <div class="ribbon-item"><span>Master Joiners of Agrabad</span><span class="diamond">◆</span></div>
+        <div class="ribbon-item"><span>Direct WhatsApp Customization</span><span class="diamond">◆</span></div>
+        <!-- Loop duplicate -->
+        <div class="ribbon-item"><span>100% Solid Seasoned Teak</span><span class="diamond">◆</span></div>
+        <div class="ribbon-item"><span>Bespoke Spatial Commissions</span><span class="diamond">◆</span></div>
+        <div class="ribbon-item"><span>Kiln-Dried Heartwood Lumber</span><span class="diamond">◆</span></div>
+        <div class="ribbon-item"><span>25-Year Integrity Warranty</span><span class="diamond">◆</span></div>
+        <div class="ribbon-item"><span>Master Joiners of Agrabad</span><span class="diamond">◆</span></div>
+        <div class="ribbon-item"><span>Direct WhatsApp Customization</span><span class="diamond">◆</span></div>
+      </div>
+    </div>
+
+    <!-- Catalog Section -->
+    <section class="page-gutter" style="padding: 2.5rem 0 6rem;">
+      <div class="container">
+        <!-- Toolbar: Instant Search + Live Stats Counter -->
+        <div class="shop-toolbar-bar reveal">
+          <div class="search-input-wrap">
+            <svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="shopSearchInput" placeholder="Search pieces, wood, or style (e.g. Teak, Cane, Desk)..." aria-label="Search Commissions">
+          </div>
+          <div class="catalog-stats-counter" id="catalogCountText">
+            Showing <strong id="visibleCount" style="color: var(--accent-gold); font-size: 1rem;">11</strong> of 11 Commissions
+          </div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-bar reveal reveal-delay-1" role="tablist" aria-label="Filter Pieces by Category">
+          <button class="filter-pill active" data-filter="all">All Commissions (11)</button>
+          <button class="filter-pill" data-filter="living">Living Room</button>
+          <button class="filter-pill" data-filter="bedroom">Bedroom Suites</button>
+          <button class="filter-pill" data-filter="dining">Royal Dining</button>
+          <button class="filter-pill" data-filter="office">Executive & Study</button>
+          <button class="filter-pill" data-filter="accents">Bespoke Accents</button>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="catalog-grid reveal-stagger" id="catalogGrid">
+          <!-- 1. Woven Egg Chair -->
+          <article class="catalog-card card-3d-tilt" data-category="living accents" data-title="Woven Hanging Egg Chair" data-wood="teak cane" data-dims="42 x 34 x 78 in" data-lead="14–18 Days" data-img="assets/images/products/woven-egg-chair.png" data-desc="Iconic organic contour with steel-reinforced ceiling hook or freestanding teak cradle. Built with seasoned Chittagong teak and high-tensile natural rattan.">
+            <div class="catalog-card-media">
+              <img src="assets/images/products/woven-egg-chair.png" alt="Woven Hanging Egg Chair">
+              <button class="quick-view-hover-btn">Quick View ✦</button>
+            </div>
+            <div class="catalog-card-content">
+              <span class="catalog-category-tag">Living Room · Accent</span>
+              <h3 class="catalog-piece-title">Woven Hanging Egg Chair</h3>
+              <p class="catalog-piece-meta">Solid Teak Base · Hand-Threaded Cane · Custom Cushion</p>
+              <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                Iconic organic contour with steel-reinforced ceiling hook or freestanding teak cradle.
+              </p>
+              <div class="catalog-card-footer">
+                <a href="product.html" class="btn btn-primary" style="padding: 0.55rem 1.25rem; font-size: 0.8125rem;">
+                  View Specifications
+                </a>
+                <a href="https://wa.me/8801960481983?text=Hello%2C%20I%20am%20interested%20in%20commissioning%20the%20Woven%20Hanging%20Egg%20Chair." target="_blank" rel="noopener noreferrer" class="rail-inquire-link">
+                  Inquire Quote →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Ergonomic Mesh Study Chair -->
+          <article class="catalog-card card-3d-tilt" data-category="office" data-title="Ergonomic Mesh Study Chair" data-wood="teak mesh" data-dims="26 x 26 x 44 in" data-lead="10–14 Days" data-img="assets/images/products/mesh-office-chair.png" data-desc="Crafted for long work hours with breathable spine support, solid teak armrests, and silent hydraulic lift.">
+            <div class="catalog-card-media">
+              <img src="assets/images/products/mesh-office-chair.png" alt="Ergonomic Mesh Office Chair">
+              <button class="quick-view-hover-btn">Quick View ✦</button>
+            </div>
+            <div class="catalog-card-content">
+              <span class="catalog-category-tag">Executive Office</span>
+              <h3 class="catalog-piece-title">Ergonomic Mesh Study Chair</h3>
+              <p class="catalog-piece-meta">Solid Teak Armrests · High-Tensile Mesh · Synchron Tilt</p>
+              <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                Crafted for long work hours with breathable spine support and silent hydraulic lift.
+              </p>
+              <div class="catalog-card-footer">
+                <a href="product.html" class="btn btn-primary" style="padding: 0.55rem 1.25rem; font-size: 0.8125rem;">
+                  View Specifications
+                </a>
+                <a href="https://wa.me/8801960481983?text=Hello%2C%20I%20am%20interested%20in%20commissioning%20the%20Ergonomic%20Mesh%20Study%20Chair." target="_blank" rel="noopener noreferrer" class="rail-inquire-link">
+                  Inquire Quote →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Royal Carved Bedside Table -->
+          <article class="catalog-card card-3d-tilt" data-category="bedroom" data-title="Royal Carved Bedside Table" data-wood="burma teak" data-dims="24 x 18 x 26 in" data-lead="12–16 Days" data-img="assets/images/products/royal-carved-bedside.png" data-desc="Hand-carved classical relief borders on solid teak panels with authentic dovetail joinery and antique brass hardware.">
+            <div class="catalog-card-media">
+              <img src="assets/images/products/royal-carved-bedside.png" alt="Royal Carved Bedside Table">
+              <button class="quick-view-hover-btn">Quick View ✦</button>
+            </div>
+            <div class="catalog-card-content">
+              <span class="catalog-category-tag">Master Bedroom</span>
+              <h3 class="catalog-piece-title">Royal Carved Bedside Table</h3>
+              <p class="catalog-piece-meta">Solid Burma Teak · Soft-Close Drawers · Antique Brass Knobs</p>
+              <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                Hand-carved classical relief borders on solid teak panels with dovetail joinery.
+              </p>
+              <div class="catalog-card-footer">
+                <a href="product.html" class="btn btn-primary" style="padding: 0.55rem 1.25rem; font-size: 0.8125rem;">
+                  View Specifications
+                </a>
+                <a href="https://wa.me/8801960481983?text=Hello%2C%20I%20am%20interested%20in%20commissioning%20the%20Royal%20Carved%20Bedside%20Table." target="_blank" rel="noopener noreferrer" class="rail-inquire-link">
+                  Inquire Quote →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Sculptural Glass Center Table -->
+          <article class="catalog-card card-3d-tilt" data-category="living accents" data-title="Sculptural Glass Center Table" data-wood="teak glass" data-dims="48 x 28 x 18 in" data-lead="10–14 Days" data-img="assets/images/products/glass-coffee-table.png" data-desc="Architectural organic base that creates airy spaciousness in contemporary living rooms. 12mm beveled toughened crystal.">
+            <div class="catalog-card-media">
+              <img src="assets/images/products/glass-coffee-table.png" alt="Sculptural Glass Coffee Table">
+              <button class="quick-view-hover-btn">Quick View ✦</button>
+            </div>
+            <div class="catalog-card-content">
+              <span class="catalog-category-tag">Living Room · Accent</span>
+              <h3 class="catalog-piece-title">Sculptural Glass Center Table</h3>
+              <p class="catalog-piece-meta">Chittagong Teak Legs · 12mm Beveled Crystal · Floating Joinery</p>
+              <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                Architectural organic base that creates airy spaciousness in contemporary living rooms.
+              </p>
+              <div class="catalog-card-footer">
+                <a href="product.html" class="btn btn-primary" style="padding: 0.55rem 1.25rem; font-size: 0.8125rem;">
+                  View Specifications
+                </a>
+                <a href="https://wa.me/8801960481983?text=Hello%2C%20I%20am%20interested%20in%20commissioning%20the%20Sculptural%20Glass%20Center%20Table." target="_blank" rel="noopener noreferrer" class="rail-inquire-link">
+                  Inquire Quote →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Heritage Nightstand -->
+          <article class="catalog-card card-3d-tilt" data-category="bedroom" data-title="Heritage Carved Nightstand" data-wood="segun walnut" data-dims="22 x 16 x 24 in" data-lead="12–16 Days" data-img="assets/images/products/heritage-nightstand.png" data-desc="Balanced dual-drawer nightstand with deep storage, solid dovetail boxes, and hand-rubbed organic wax finish.">
+            <div class="catalog-card-media">
+              <img src="assets/images/products/heritage-nightstand.png" alt="Heritage Carved Nightstand">
+              <button class="quick-view-hover-btn">Quick View ✦</button>
+            </div>
+            <div class="catalog-card-content">
+              <span class="catalog-category-tag">Master Bedroom</span>
+              <h3 class="catalog-piece-title">Heritage Carved Nightstand</h3>
+              <p class="catalog-piece-meta">100% Chittagong Segun · Walnut Finish · Lifetime Termite Proof</p>
+              <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                Balanced dual-drawer nightstand with deep storage and hand-rubbed wax finish.
+              </p>
+              <div class="catalog-card-footer">
+                <a href="product.html" class="btn btn-primary" style="padding: 0.55rem 1.25rem; font-size: 0.8125rem;">
+                  View Specifications
+                </a>
+                <a href="https://wa.me/8801960481983?text=Hello%2C%20I%20am%20interested%20in%20commissioning%20the%20Heritage%20Carved%20Nightstand." target="_blank" rel="noopener noreferrer" class="rail-inquire-link">
+                  Inquire Quote →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Dual-Tone Storage Ottoman -->
+          <article class="catalog-card card-3d-tilt" data-category="living accents" data-title="Dual-Tone Storage Ottoman" data-wood="leather boucle" data-dims="36 x 24 x 18 in" data-lead="10–14 Days" data-img="assets/images/products/storage-ottoman.png" data-desc="Multipurpose luxury footstool and blanket chest with smooth hydraulic stay hinges and solid internal framing.">
+            <div class="catalog-card-media">
+              <img src="assets/images/products/storage-ottoman.png" alt="Dual-Tone Storage Ottoman">
+              <button class="quick-view-hover-btn">Quick View ✦</button>
+            </div>
+            <div class="catalog-card-content">
+              <span class="catalog-category-tag">Living Room · Accent</span>
+              <h3 class="catalog-piece-title">Dual-Tone Storage Ottoman</h3>
+              <p class="catalog-piece-meta">Saddle Leather · Textured Boucle · Hydraulic Soft Lift</p>
+              <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                Multipurpose luxury footstool and blanket chest with smooth hydraulic stay hinges.
+              </p>
+              <div class="catalog-card-footer">
+                <a href="product.html" class="btn btn-primary" style="padding: 0.55rem 1.25rem; font-size: 0.8125rem;">
+                  View Specifications
+                </a>
+                <a href="https://wa.me/8801960481983?text=Hello%2C%20I%20am%20interested%20in%20commissioning%20the%20Dual-Tone%20Storage%20Ottoman." target="_blank" rel="noopener noreferrer" class="rail-inquire-link">
+                  Inquire Quote →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. Regal Teak Upholstered Sofa -->
+          <article class="catalog-card card-3d-tilt" data-category="living" data-title="Regal Teak Upholstered Sofa" data-wood="solid teak linen" data-dims="88 x 38 x 32 in" data-lead="21–28 Days" data-img="assets/images/products/royal-sofa-set.png" data-desc="Architectural 3-seater lounge with feather-down wrapped cushions for plush comfort, supported by hand-jointed solid teak timbers.">
+            <div class="catalog-card-media">
+              <img src="assets/images/products/royal-sofa-set.png" alt="Regal Teak Upholstered Sofa">
+              <button class="quick-view-hover-btn">Quick View ✦</button>
+            </div>
+            <div class="catalog-card-content">
+              <span class="catalog-category-tag">Living Room</span>
+              <h3 class="catalog-piece-title">Regal Teak Upholstered Sofa</h3>
+              <p class="catalog-piece-meta">Solid Teak Subframe · High Resiliency Foam · Belgian Linen</p>
+              <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                Architectural 3-seater lounge with feather-down wrapped cushions for plush comfort.
+              </p>
+              <div class="catalog-card-footer">
+                <a href="product.html" class="btn btn-primary" style="padding: 0.55rem 1.25rem; font-size: 0.8125rem;">
+                  View Specifications
+                </a>
+                <a href="https://wa.me/8801960481983?text=Hello%2C%20I%20am%20interested%20in%20commissioning%20the%20Regal%20Teak%20Upholstered%20Sofa." target="_blank" rel="noopener noreferrer" class="rail-inquire-link">
+                  Inquire Quote →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. Scandinavian Teak Armchair -->
+          <article class="catalog-card card-3d-tilt" data-category="living accents" data-title="Scandinavian Teak Armchair" data-wood="gamari teak boucle" data-dims="30 x 32 x 33 in" data-lead="12–16 Days" data-img="assets/images/products/lounge-armchair.png" data-desc="Clean sculpted arm profiles with floating seat geometry and durable textured wool blend boucle fabric.">
+            <div class="catalog-card-media">
+              <img src="assets/images/products/lounge-armchair.png" alt="Scandinavian Teak Armchair">
+              <button class="quick-view-hover-btn">Quick View ✦</button>
+            </div>
+            <div class="catalog-card-content">
+              <span class="catalog-category-tag">Living Room · Accent</span>
+              <h3 class="catalog-piece-title">Scandinavian Teak Armchair</h3>
+              <p class="catalog-piece-meta">Chittagong Gamari / Teak · Organic Slope · Boucle Cushion</p>
+              <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                Clean sculpted arm profiles with floating seat geometry and durable wool blend fabric.
+              </p>
+              <div class="catalog-card-footer">
+                <a href="product.html" class="btn btn-primary" style="padding: 0.55rem 1.25rem; font-size: 0.8125rem;">
+                  View Specifications
+                </a>
+                <a href="https://wa.me/8801960481983?text=Hello%2C%20I%20am%20interested%20in%20commissioning%20the%20Scandinavian%20Teak%20Armchair." target="_blank" rel="noopener noreferrer" class="rail-inquire-link">
+                  Inquire Quote →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9. Monolithic Teak Dining Table -->
+          <article class="catalog-card card-3d-tilt" data-category="dining" data-title="Monolithic Teak Dining Table" data-wood="solid teak plank" data-dims="96 x 42 x 30 in" data-lead="24–30 Days" data-img="assets/images/products/teak-dining-table.png" data-desc="Crafted from continuous kiln-dried heartwood planks with cross-braced trestle joinery. Built for 8-10 dinner guests.">
+            <div class="catalog-card-media">
+              <img src="assets/images/products/teak-dining-table.png" alt="Solid Teak Dining Table">
+              <button class="quick-view-hover-btn">Quick View ✦</button>
+            </div>
+            <div class="catalog-card-content">
+              <span class="catalog-category-tag">Royal Dining</span>
+              <h3 class="catalog-piece-title">Monolithic Teak Dining Table</h3>
+              <p class="catalog-piece-meta">8-10 Seater Solid Plank · Beveled Chamfer Edge · Matte PU</p>
+              <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                Crafted from continuous kiln-dried heartwood planks with cross-braced trestle joinery.
+              </p>
+              <div class="catalog-card-footer">
+                <a href="product.html" class="btn btn-primary" style="padding: 0.55rem 1.25rem; font-size: 0.8125rem;">
+                  View Specifications
+                </a>
+                <a href="https://wa.me/8801960481983?text=Hello%2C%20I%20am%20interested%20in%20commissioning%20the%20Monolithic%20Teak%20Dining%20Table." target="_blank" rel="noopener noreferrer" class="rail-inquire-link">
+                  Inquire Quote →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10. Executive Floating Study Desk -->
+          <article class="catalog-card card-3d-tilt" data-category="office" data-title="Executive Floating Study Desk" data-wood="teak leather brass" data-dims="72 x 34 x 30 in" data-lead="18–24 Days" data-img="assets/images/products/minimalist-desk.png" data-desc="Designed for modern corporate leaders in Chattogram. Concealed wire canal and hand-stitched leather desktop blotter.">
+            <div class="catalog-card-media">
+              <img src="assets/images/products/minimalist-desk.png" alt="Executive Study Desk">
+              <button class="quick-view-hover-btn">Quick View ✦</button>
+            </div>
+            <div class="catalog-card-content">
+              <span class="catalog-category-tag">Executive Office</span>
+              <h3 class="catalog-piece-title">Executive Floating Study Desk</h3>
+              <p class="catalog-piece-meta">Concealed Wire Canal · Teak Veneer & Solid Rim · Leather Pad</p>
+              <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                Designed for modern executives in Chattogram. Cable management built into leg profiles.
+              </p>
+              <div class="catalog-card-footer">
+                <a href="product.html" class="btn btn-primary" style="padding: 0.55rem 1.25rem; font-size: 0.8125rem;">
+                  View Specifications
+                </a>
+                <a href="https://wa.me/8801960481983?text=Hello%2C%20I%20am%20interested%20in%20commissioning%20the%20Executive%20Floating%20Study%20Desk." target="_blank" rel="noopener noreferrer" class="rail-inquire-link">
+                  Inquire Quote →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 11. Fluted Teak Architectural Credenza -->
+          <article class="catalog-card card-3d-tilt" data-category="living office accents" data-title="Fluted Teak Architectural Credenza" data-wood="solid teak brass" data-dims="68 x 18 x 32 in" data-lead="18–24 Days" data-img="assets/images/products/accent-credenza.png" data-desc="Hand-routed solid teak vertical slats that glide silently on custom curved tracks, concealing media hardware or fine dinnerware.">
+            <div class="catalog-card-media">
+              <img src="assets/images/products/accent-credenza.png" alt="Fluted Teak Accent Credenza">
+              <button class="quick-view-hover-btn">Quick View ✦</button>
+            </div>
+            <div class="catalog-card-content">
+              <span class="catalog-category-tag">Living & Office</span>
+              <h3 class="catalog-piece-title">Fluted Teak Architectural Credenza</h3>
+              <p class="catalog-piece-meta">Tambour Slat Sliding Doors · Brass Stretcher · Adjustable Shelves</p>
+              <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                Hand-routed solid teak vertical slats that glide silently on custom curved tracks.
+              </p>
+              <div class="catalog-card-footer">
+                <a href="product.html" class="btn btn-primary" style="padding: 0.55rem 1.25rem; font-size: 0.8125rem;">
+                  View Specifications
+                </a>
+                <a href="https://wa.me/8801960481983?text=Hello%2C%20I%20am%20interested%20in%20commissioning%20the%20Fluted%20Teak%20Architectural%20Credenza." target="_blank" rel="noopener noreferrer" class="rail-inquire-link">
+                  Inquire Quote →
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Quick View Interactive Modal -->
+  <div class="modal-backdrop" id="quickViewModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
+      <div class="modal-grid">
+        <div class="modal-media-frame">
+          <img id="modalImg" src="" alt="Piece Preview">
+        </div>
+        <div class="modal-details">
+          <span class="catalog-category-tag" id="modalCategory"></span>
+          <h2 class="serif-title" id="modalTitle" style="font-size: clamp(1.75rem, 3vw, 2.35rem); margin-bottom: 0.5rem;"></h2>
+          <p class="catalog-piece-meta" id="modalMeta" style="color: var(--accent-gold); font-weight: 600;"></p>
+          <p id="modalDesc" style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.65; margin: 1.25rem 0;"></p>
+          
+          <div style="background: var(--bg-secondary); border-radius: var(--radius-md); padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+            <div>
+              <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Standard Dimensions</span>
+              <strong id="modalDims" style="display: block; font-size: 0.875rem; color: var(--text-primary); margin-top: 2px;"></strong>
+            </div>
+            <div>
+              <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Handcrafting Lead Time</span>
+              <strong id="modalLead" style="display: block; font-size: 0.875rem; color: var(--accent-gold-hover); margin-top: 2px;"></strong>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a id="modalWaBtn" href="" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="flex: 1; justify-content: center;">
+              <span>Reserve via WhatsApp</span>
+            </a>
+            <a id="modalDetailLink" href="product.html" class="btn btn-outline" style="padding: 0.75rem 1.25rem;">
+              Full Specs →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- Newsletter Bar -->
+      <div class="footer-newsletter-bar reveal">
+        <div class="newsletter-content">
+          <h3 class="newsletter-title">Subscribe to our newsletter.</h3>
+        </div>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Heaven Furniture Mart news and private previews.');">
+          <input type="email" placeholder="hello@gmail.com" required class="newsletter-input" aria-label="Your email address">
+          <button type="submit" class="newsletter-btn">Submit</button>
+        </form>
+      </div>
+
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <div class="header-brand" style="margin-bottom: 1.25rem;">
+            <div class="brand-monogram">H</div>
+            <div class="brand-text">
+              <span class="brand-title" style="color: var(--text-light);">Heaven Furniture Mart</span>
+              <span class="brand-subtitle">Chattogram</span>
+            </div>
+          </div>
+          <p style="font-size: 0.9375rem; color: var(--text-light-muted); line-height: 1.7;">
+            Chattogram's premier bespoke solid teak studio. Agrabad Access Road.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Flagship Home</a>
+            <a href="shop.html" class="footer-link">Curated Catalog</a>
+            <a href="about.html" class="footer-link">Heritage & Founder</a>
+            <a href="product.html" class="footer-link">Featured Commission</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Showroom & Atelier</h4>
+          <p style="font-size: 0.9375rem; color: var(--text-light-muted); line-height: 1.6;">
+            Agrabad Access Road, Chattogram.<br>
+            Hotline: +880 1960-481983
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2010 – 2026 Heaven Furniture Mart. RACDOX Hackathon Championship Submission.</p>
+        <p>100% Solid Seasoned Teak · Chattogram, Bangladesh</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+  <script>
+    // Comprehensive Shop Filtering & Quick View Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterButtons = document.querySelectorAll('.filter-pill');
+      const searchInput = document.getElementById('shopSearchInput');
+      const cards = document.querySelectorAll('.catalog-card');
+      const visibleCount = document.getElementById('visibleCount');
+
+      let currentCategory = 'all';
+      let currentQuery = '';
+
+      function applyFilters() {
+        let shown = 0;
+        cards.forEach(card => {
+          const category = card.getAttribute('data-category') || '';
+          const title = (card.getAttribute('data-title') || '').toLowerCase();
+          const wood = (card.getAttribute('data-wood') || '').toLowerCase();
+          const desc = (card.getAttribute('data-desc') || '').toLowerCase();
+
+          const matchesCategory = (currentCategory === 'all' || category.includes(currentCategory));
+          const matchesQuery = !currentQuery || title.includes(currentQuery) || wood.includes(currentQuery) || desc.includes(currentQuery);
+
+          if (matchesCategory && matchesQuery) {
+            card.style.display = 'flex';
+            shown++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (visibleCount) visibleCount.textContent = shown;
+      }
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCategory = btn.getAttribute('data-filter');
+          applyFilters();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentQuery = e.target.value.trim().toLowerCase();
+          applyFilters();
+        });
+      }
+
+      // Quick View Modal
+      const modal = document.getElementById('quickViewModal');
+      const closeBtn = document.getElementById('modalCloseBtn');
+      const modalImg = document.getElementById('modalImg');
+      const modalCategory = document.getElementById('modalCategory');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalMeta = document.getElementById('modalMeta');
+      const modalDesc = document.getElementById('modalDesc');
+      const modalDims = document.getElementById('modalDims');
+      const modalLead = document.getElementById('modalLead');
+      const modalWaBtn = document.getElementById('modalWaBtn');
+
+      cards.forEach(card => {
+        const qvBtn = card.querySelector('.quick-view-hover-btn');
+        if (qvBtn) {
+          qvBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const title = card.getAttribute('data-title');
+            const category = card.querySelector('.catalog-category-tag').textContent;
+            const meta = card.querySelector('.catalog-piece-meta').textContent;
+            const desc = card.getAttribute('data-desc');
+            const img = card.getAttribute('data-img');
+            const dims = card.getAttribute('data-dims');
+            const lead = card.getAttribute('data-lead');
+
+            modalImg.src = img;
+            modalCategory.textContent = category;
+            modalTitle.textContent = title;
+            modalMeta.textContent = meta;
+            modalDesc.textContent = desc;
+            modalDims.textContent = dims;
+            modalLead.textContent = lead;
+
+            const waText = encodeURIComponent(`Hello Heaven Furniture Mart, I am inquiring about the ${title} (Dimensions: ${dims}). Please advise current availability.`);
+            modalWaBtn.href = `https://wa.me/8801960481983?text=${waText}`;
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+          });
+        }
+      });
+
+      function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeModal();
+        });
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+          closeModal();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
